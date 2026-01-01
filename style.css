@@ -198,7 +198,18 @@ h4 {
         opacity: 1;
     }
 }
-
+.dot-title{
+    font-weight: var(--fw600);
+    font-size: var(--fs14);
+    font-family: var(--primary-font);
+    line-height: 34px;
+}
+.dot-title a {
+    transition: var(--transition-color);
+}
+.dot-title a:hover,.dotgrid .product-price .before{
+    color: var(--light-color);
+}
 /* --------------------- 
     #HEADER 
 --------------------- */
@@ -224,9 +235,9 @@ h4 {
     max-width: 720px;
 }
 
-.header-center nav ul {
+/* .header-center nav ul {
     display: flex;
-}
+} */
 
 .header-center .branding {
     position: absolute;
@@ -325,7 +336,7 @@ h4 {
     opacity: 1;
     transform: translateZ(0);
 }
-.dotgrid .actions ul{
+.dotgrid .actions ul, .dotgrid .dot-image .label{
     display: flex;
     justify-content: center;
     gap: 10px;
@@ -347,7 +358,7 @@ h4 {
 }
 .dotgrid .dot-image .label{
     top: auto;
-    bottom: 0;
+    bottom: 20px;
 }
 .dotgrid .dot-image .label span{
     font-size: 12px;
@@ -355,6 +366,13 @@ h4 {
     background-color: var(--primary-color);
     color: var(--white-color);
 }
+.dotgrid .dot-info{
+    text-align: center;
+}
+.dotgrid .product-price .before{
+    text-decoration: line-through;
+}
+
 @media (min-width: 992px) {
     .menu-trigger {
         display: none;
@@ -371,11 +389,21 @@ h4 {
     /* 
     #Sub menu & Mega
     */
+    .mega-content{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 60px;
+    }
+    .mega-content .links{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(135px, 1fr));
+        gap: 15px;
+    }
     nav.menu .sub-mega {
         left: 0;
         right: 0;
         padding: 50px 0;
-        display: block;
+        /* display: block; */
     }
     nav.menu :where(.sub-menu, .sub-mega) {
         position: absolute;
@@ -398,5 +426,16 @@ h4 {
 
     nav.menu .sub-menu li {
         padding: 5px 30px;
+    }
+}
+@media (min-width: 1200px) {
+    .container.wide{
+        --mx-width: 1720px;
+        --gutter: 40px
+    }
+}
+@media (min-width: 1400px) {
+    .mega-content{
+        grid-template-columns: 1fr 1fr;
     }
 }
