@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css" rel="stylesheet" />
 </head>
 
@@ -18,7 +19,7 @@
                     <div class="wrap">
                         <div class="header-left">
                             <div class="menu-bar">
-                                <a href="#0" class="menu-trigger" trigger-button data-target="mobile-menu"><i class="ri-menu-line">=</i></a>
+                                <a href="#0" class="menu-trigger" trigger-button data-target="mobile-menu"><i class="ri-menu-line"></i></a>
                             </div>
                             <div class="list-inline">
                                 <ul>
@@ -234,7 +235,67 @@
             </div>
         </header>
 
-        <main></main>
+        <main>
+            <div class="slider">
+                <div class="sliderbox swiper">
+                    <div class="wrap swiper-wrapper">
+                        <div class="item swiper-slide">
+                            <div class="image">
+                                <div class="ob-cover">
+                                    <img src="/assets/slider_01.jpg" alt="">
+                                </div>
+                                <div class="title-info">
+                                    <div class="container wide">
+                                        <div class="wrap">
+                                            <span class="price">$39</span>
+                                            <h3 class="title">Feel The Tosca Color</h3>
+                                            <div class="button"><a href="" class="primary-btn">Shop Now</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                         <div class="item swiper-slide">
+                            <div class="image">
+                                <div class="ob-cover">
+                                    <img src="/assets/slider_02.jpg" alt="">
+                                </div>
+                                <div class="title-info">
+                                    <div class="container wide">
+                                        <div class="wrap">
+                                            <span class="price">$65</span>
+                                            <h3 class="title">Inner World Of Brwon</h3>
+                                            <div class="button"><a href="" class="primary-btn">Shop Now</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                         <div class="item swiper-slide">
+                            <div class="image">
+                                <div class="ob-cover">
+                                    <img src="/assets/slider_03.jpg" alt="">
+                                </div>
+                                <div class="title-info">
+                                    <div class="container wide">
+                                        <div class="wrap">
+                                            <span class="price">$95</span>
+                                            <h3 class="title">What A Xix Of Colors</h3>
+                                            <div class="button"><a href="" class="primary-btn">Shop Now</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="custom-pagination">
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </main>
         <footer></footer>
     </div>
     <div class="overlay" data-overlay></div>
@@ -299,6 +360,8 @@
             </div>
         </div>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
 
