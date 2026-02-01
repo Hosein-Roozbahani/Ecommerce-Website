@@ -780,6 +780,48 @@ main > div .heading {
 /* 
     #CAROUSEL: 
 */
+.carousel .inner-wrapper {
+    position: relative;
+}
+.carousel .dotgrid .wrapper {
+    display: flex;
+    grid-template-columns: unset;
+    gap: unset;
+}
+.carousel .nav > div::after {
+    content: none;
+}
+
+.carousel .nav .swiper-button-prev svg.swiper-navigation-icon, .carousel .nav .swiper-button-next svg.swiper-navigation-icon{
+display: none !important;
+}
+
+
+.carousel .nav > div {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border: 1px solid var( --gray-color);
+    border-radius: 50%;
+    color: var(--dark-color);
+    font-size: 20px;
+    -webkit-tap-highlight-color: transparent;
+    transition: var(--transition-background), var(--transition-color), var(--transition-border);
+}
+.carousel .nav > div:hover {
+    color: var(--white-color);
+    background-color: var(--dark-color);
+    border-color: var(--dark-color);
+}
+.carousel .nav .swiper-button-disabled {
+    display: none;
+}
+
+@media (max-width: 480px) {
+    .carousel .dotgrid .item {
+        width: 270px;
+    }
+}
 
 @media (min-width: 992px) {
     .menu-trigger {
@@ -880,5 +922,16 @@ main > div .heading {
 @media (min-width: 1400px) {
     .mega-content {
         grid-template-columns: 1fr 1fr;
+    }
+    .carousel .inner-wrapper {
+        max-width: 1250px;
+        margin: 0 auto;
+        padding: 0 40px;
+    }
+    .carousel .nav >  .swiper-button-next{
+        right: -40px;
+    }
+    .carousel .nav >  .swiper-button-prev{
+        right: -40px;
     }
 }
