@@ -30,6 +30,59 @@ submenu.forEach((menu) => menu.addEventListener('click', function (e) {
     }
 }))
 
+//sorter
+const sorter = document.querySelector('.sort-list');
+
+if(sorter){
+    const sortLi = sorter.querySelectorAll('li');
+    sorter.querySelector('.opt-trigger').addEventListener('click', function () {
+        sorter.querySelector('ul').classList.toggle('show')
+    });
+    sortLi.forEach( (item) => item.addEventListener('click', function () {
+        sortLi.forEach((li) => li != this ? li.classList.remove('.active'): null);
+
+        this.classList.add('active');
+        sorter.querySelector('.opt-trigger span.value').textContent = this.textContent;
+        sorter.querySelector('ul').classList.toggle('show')
+    }))
+}
+
+//tabbed
+
+// const trigger = document.querySelectorAll('.tabbed-trigger'),
+//     content = document.querySelectorAll('.tabbed > div');
+// trigger.forEach((btn) => {
+//     btn.addEventListener('click', function () {
+//         let dataTarget = this.dataset.id,
+//         body = document.querySelector(`#${dataTarget}`);
+
+//         trigger.forEach((b) => b.parentNode.classList.remove('active'));
+//         trigger.forEach((s) => s.classList.remove('active'));
+//         this.parentNode.classList.add('active');
+//         body.classList.add('active');
+//     })
+// })
+
+const trigger = document.querySelectorAll('.tabbed-trigger'),
+content = document.querySelectorAll('.tabbed > div');
+
+trigger.forEach((btn) => {
+btn.addEventListener('click', function (e) {
+e.preventDefault(); // جلوگیری از رفتار href
+const dataTarget = this.dataset.id;
+const body = document.getElementById(dataTarget);
+
+// پاک کردن کلاس active از همه trigger parentها و از همه محتواها
+trigger.forEach(t => t.parentNode.classList.remove('active'));
+content.forEach(c => c.classList.remove('active'));
+
+// افزودن active به مورد انتخاب‌شده
+this.parentNode.classList.add('active');
+if (body) body.classList.add('active');
+
+});
+});
+
 // Slider swipering
 
 const swiper = new Swiper('.sliderbox', {
