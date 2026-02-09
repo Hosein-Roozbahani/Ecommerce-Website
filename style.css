@@ -51,6 +51,7 @@ body {
     line-height: 1.8;
     color: var(--dark-color);
     background-color: var(--white-color);
+    margin-bottom: 9rem;
 }
 
 a {
@@ -740,7 +741,7 @@ form.search :where(i:last-child) {
 /* 
     #GUIDE: 
 */
-.page-home main > div:not(.slider) {
+.page-home main > div:not(.slider, .frominsta) {
     padding: 100px 0;
 }
 .guide {
@@ -937,6 +938,39 @@ display: none !important;
     #FROM INESTAGRAM: 
 */
 
+.frominsta .container.wide {
+    --mx-width: none;
+    --gutter : 0;
+}
+.frominsta .dotgrid .wrapper {
+    background-color: var(--light-color);
+}
+.frominsta img {
+    width: 100%;
+}
+.frominsta .dot-image {
+    margin: 0;
+}
+.frominsta .actions {
+    font-size: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--white-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    margin: 0 auto;
+}
+
+@media (min-width: 200px) {
+    .scrollto > .wrapper {
+        padding: 0 !important;
+        background-color: var(--white-color) !important;
+    }
+
+}
 @media (max-width: 480px) {
     .carousel .dotgrid .item {
         width: 270px;
