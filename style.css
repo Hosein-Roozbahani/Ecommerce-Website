@@ -753,11 +753,11 @@ main > div .heading {
 .guide .dotgrid .wrapper {
     --grid-col: 260px;
 }
-:is(.guide) .dot-image .thumbnail {
+:is(.guide,.fromblog) .dot-image .thumbnail {
     position: relative;
     opacity: unset;
 }
-.guide .dot-image .thumbnail img {
+:is(.guide,.fromblog) .dot-image .thumbnail img {
     width: 100%;
 }
 .guide .dot-title {
@@ -768,7 +768,7 @@ main > div .heading {
 .guide .dot-info p {
     line-height: 1.4;
 }
-.guide .wrapper .item {
+.scrollto .wrapper .item {
     width: 290px;
     scroll-snap-align: start;
     flex-shrink: 0;
@@ -899,8 +899,43 @@ display: none !important;
     text-transform: uppercase;
 }
 .banner h3 {
-    --fs-max: 80px
+    --fs-max: 80px;
 }
+
+/* 
+    #FROM BLOG: 
+*/
+
+.fromblog .dot-title {
+    --primary-font : var(var(--second-font));
+    --fs14: 18px;
+    --fw600: 400;
+    margin-top: 15px;
+}
+.fromblog .dot-info > a {
+    display: inline-block;
+    font-size: 12px;
+    text-transform: uppercase;
+    border: 1px solid var(--light-color);
+    color: var(--gray-color);
+    padding: 1px 10px;
+    transition: var(--transition-background), var(--transition-color), var(--transition-border);
+    border-radius: 8px;
+}
+.fromblog .dot-info > a:hover {
+    background-color: var(--dark-color);
+    border-color: var(--dark-color);
+    color: var(--white-color);
+}
+.fromblog .button {
+    text-align: center;
+    margin-top: 40px;
+
+}
+
+/* 
+    #FROM INESTAGRAM: 
+*/
 
 @media (max-width: 480px) {
     .carousel .dotgrid .item {
@@ -999,6 +1034,16 @@ display: none !important;
     /* .slider .title-info .container .wrap {
         line-height: 10rem !important;
     } */
+    .scrollto .wrapper{
+        --display : grid;
+        padding: 0;
+        overflow: unset;
+        scroll-snap-type: unset;
+        overscroll-behavior-inline: unset;
+    }
+    .scrollto .wrapper .item{
+        width: unset;
+    }
 }
 
 @media (min-width: 1200px) {
