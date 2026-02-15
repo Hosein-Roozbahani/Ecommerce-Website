@@ -51,7 +51,6 @@ body {
     line-height: 1.8;
     color: var(--dark-color);
     background-color: var(--white-color);
-    margin-bottom: 9rem;
 }
 
 a {
@@ -498,7 +497,7 @@ form.search {
     position: relative;
 }
 
-form.search :where(i) {
+form.search :where(i, .submit) {
     position: absolute;
     top: 0;
     left: 0;
@@ -519,9 +518,33 @@ form.search i {
     cursor: pointer;
 }
 
-form.search :where(i:last-child) {
+form.search :where(.submit,i:last-child) {
     right: 0;
     left: auto;
+}
+form.search .submit {
+    border: 0;
+    background-color: transparent;
+    color: transparent;
+    width: 50px;
+    height: 100%;
+    right: 0;
+    z-index: 1;
+    cursor: pointer;
+}
+form :where(input, textarea, select) {
+    font-size: var(--fs14);
+    border: 1px solid var(--light-color);
+    outline: 0;
+    background-color: transparent;
+    padding: 10px 20px;
+    transition: border .3s;
+}
+form :where(input, textarea, select):focus {
+    border-color:  var(--dark-color);
+}
+form :where(input, textarea, select)::placeholder {
+    color: var(--gray-color);
 }
 
 .inner-header .search .input {
@@ -741,7 +764,7 @@ form.search :where(i:last-child) {
 /* 
     #GUIDE: 
 */
-.page-home main > div:not(.slider, .frominsta) {
+.page-home main > div:not(.slider, .frominsta), .inner-footer {
     padding: 100px 0;
 }
 .guide {
@@ -943,7 +966,7 @@ display: none !important;
     --gutter : 0;
 }
 .frominsta .dotgrid .wrapper {
-    background-color: var(--light-color);
+    background-color: var(--flashwhite-color);
 }
 .frominsta img {
     width: 100%;
@@ -962,6 +985,42 @@ display: none !important;
     justify-content: center;
     pointer-events: none;
     margin: 0 auto;
+}
+
+/* 
+    #FOOTER: 
+*/
+
+
+.inner-footer {
+    background-color: var(--flashwhite-color);
+    line-height: 1.4;
+    padding-bottom: 30px;
+}
+.inner-footer .wrap > div {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+    gap: 60px;
+}
+.inner-footer .subscribe {
+    width: 100%;
+}
+.inner-footer .top .subscribe h3{
+    margin-bottom: 20px;
+}
+.inner-footer p {
+    font-size: var(--fs14);
+}
+.inner-footer .search {
+    max-width: 400px;
+}
+.inner-footer .search .input {
+    font-size: var(--fs14);
+    border: 2px solid var(--dark-color);
+}
+.inner-footer .bottom {
+    padding: 40px 0;
 }
 
 @media (min-width: 200px) {
@@ -1077,6 +1136,9 @@ display: none !important;
     }
     .scrollto .wrapper .item{
         width: unset;
+    }
+    .inner-footer .wrap > div {
+        flex-flow: nowrap;
     }
 }
 
