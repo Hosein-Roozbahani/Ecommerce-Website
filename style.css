@@ -1125,25 +1125,92 @@ main>div .heading {
 }
 
 .breadcrumb ul li:not(:first-child)::before {
-content: '';
-position: absolute;
-left: 0;
-width: 16px;
-height: 16px;
-background-image: url("data:image/svg+xml;utf8,%3Csvg%20viewBox%3D%220%200%201024%201024%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M256%20120.768L306.432%2064%20768%20512l-461.568%20448L256%20903.232%20659.072%20512z%22%20fill%3D%22%23000%22/%3E%3C/svg%3E");
-background-size: cover;
-background-repeat: no-repeat;
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    background-image: url("data:image/svg+xml;utf8,%3Csvg%20viewBox%3D%220%200%201024%201024%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M256%20120.768L306.432%2064%20768%20512l-461.568%20448L256%20903.232%20659.072%20512z%22%20fill%3D%22%23000%22/%3E%3C/svg%3E");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
+
 .breadcrumb ul :where(li, li a) {
     font-size: var(--fs14);
     padding: 0;
 }
+
 .breadcrumb ul li:last-child {
     color: var(--gray-color);
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
+/* 
+    #PRODUCT IMAGE: 
+*/
+
+.product .wrapper {
+    --grid-col: 331px;
+}
+.product .main-image img {
+    width: 100%;
+}
+.product .outer-thumb {
+    display: none;
+}
+.product .outer-thumb .item {
+    height: fit-content!important;
+    cursor: pointer;
+}
+.product .thumb-wrap {
+    position: relative;
+    width: 70px;
+    height: 90px;
+}
+.product .outer-thumb img {
+    transition: var(--transition-transform);
+}
+.product .outer-thumb .swiper-slide-thumb-active > div, .product .outer-thumb .item:hover > div{
+    border: 1px solid var(--gray-color);
+}
+.product .outer-thumb .swiper-slide-thumb-active > img, .product .outer-thumb .item:hover img{
+    transform: scale3d(.85,.85,.85);
+}
+.product .custom-pagination {
+    position: relative;
+    height: 50px;
+}
+
+@media (min-width: 481px) {
+    .product .wrapper {
+        --gutter : 60px;
+    }
+    .product.dotgrid .image {
+        position: relative;
+        max-width: 500px;
+        width: 100%;
+        margin: 0 auto;
+        height: min-content;
+        overflow: hidden;
+    }
+    .product .outer-main {
+        width: calc(100% - 85px);
+        height: 100%;
+        margin: 0 0 0 85px;
+    }
+    .product .outer-thumb {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .custom-pagination{
+        display: none;
+    }
+}
+
 
 @media (min-width: 200px) {
     .scrollto>.wrapper {
