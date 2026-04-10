@@ -1,5 +1,5 @@
 const triggerOpen = document.querySelectorAll('[trigger-button]');
-const triggerClose = document.querySelectorAll('[close-button ]');
+const triggerClose = document.querySelectorAll('[close-button]');
 const overlay = document.querySelector('[data-overlay]');
 
 for (let i = 0; i < triggerOpen.length; i++) {
@@ -10,14 +10,16 @@ for (let i = 0; i < triggerOpen.length; i++) {
         targetEl.classList.remove('active');
         overlay.classList.remove('active');
     };
-    triggerOpen[i].addEventListener('click', function () {
+    triggerOpen[i].addEventListener('click', function (e) {
         targetEl.classList.add('active');
         overlay.classList.add('active');
+        e.preventDefault();
     });
 
     targetEl.querySelector('[close-button]').addEventListener('click', openData);
     overlay.addEventListener('click', openData);
-
+    console.log(targetEl);
+    
 }
 
 // mobile-menu submenu

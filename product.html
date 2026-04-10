@@ -217,8 +217,9 @@
                                 <ul>
                                     <li><a href="#0" trigger-button data-target="search-float"><i
                                                 class="ri-search-line"></i></a></li>
-                                    <li><a href=""><span class="item-floating">3</span><i
-                                                class="ri-shopping-bag-line"></i></a></li>
+                                    <li><a href="" trigger-button data-target="data-cart"><span
+                                                class="item-floating">3</span><i class="ri-shopping-bag-line"></i></a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -375,10 +376,11 @@
                                                 <li><a href=""><i
                                                             class="ri-arrow-left-right-line"></i><span>Compare</span></a>
                                                 </li>
-                                                <li><a href=""><i
+                                                <li><a href="#0" trigger-button data-target="data-share"><i
                                                             class="ri-share-forward-line"></i><span>Share</span></a>
                                                 </li>
-                                                <li><a href=""><i class="ri-question-line"></i><span>Ask
+                                                <li><a href="#0" trigger-button data-target="data-question"><i
+                                                            class="ri-question-line"></i><span>Ask
                                                             Question</span></a></li>
                                             </ul>
                                         </div>
@@ -404,10 +406,15 @@
                             <div class="wrapper tabbed">
                                 <nav class="list-inline scrollto">
                                     <ul class="wrapper">
-                                        <li class="active"><a href="#0" class="tabbed-trigger" data-id="product-descripton"><span>Product details</span></a></li>
-                                        <li><a href="#0" class="tabbed-trigger" data-id="product-custom"><span>Custom</span></a></li>
-                                        <li><a href="#0" class="tabbed-trigger" data-id="product-review"><span>Reviews</span> <span class="item-floating">3</span></a> </li>                                   
-                                        <li><a href="#0" class="tabbed-trigger" data-id="product-shopping"><span>Shopping</span></a></li>
+                                        <li class="active"><a href="#0" class="tabbed-trigger"
+                                                data-id="product-descripton"><span>Product details</span></a></li>
+                                        <li><a href="#0" class="tabbed-trigger"
+                                                data-id="product-custom"><span>Custom</span></a></li>
+                                        <li><a href="#0" class="tabbed-trigger"
+                                                data-id="product-review"><span>Reviews</span> <span
+                                                    class="item-floating">3</span></a> </li>
+                                        <li><a href="#0" class="tabbed-trigger"
+                                                data-id="product-shopping"><span>Shopping</span></a></li>
                                     </ul>
                                 </nav>
                                 <div id="product-descripton" class="product-about description active">
@@ -470,7 +477,8 @@
                                                 <span>3 reviews</span>
                                             </div>
                                             <div class="button">
-                                                <a href="" class="primary-btn">Write a review</a>
+                                                <a href="#0" class="primary-btn" trigger-button
+                                                    data-target="data-review">Write a review</a>
                                             </div>
                                         </div>
                                         <div class="body-review">
@@ -567,6 +575,281 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Carousel structure, copy from index.html -->
+
+            <div class="carousel">
+                <div class="container">
+                    <div class="wrap">
+                        <div class="heading">
+                            <h2 class="title">New Arrivals</h2>
+                        </div>
+                        <div class="inner-wrapper">
+                            <div class="dotgrid carouselbox swiper">
+                                <!-- copy from mega menu structure -->
+                                <div class="wrapper swiper-wrapper">
+                                    <div class="item swiper-slide">
+                                        <div class="dot-image">
+                                            <a href="" class="product-permalink"></a>
+                                            <div class="thumbnail">
+                                                <img src="assets/product_01.jpg" alt="">
+                                            </div>
+                                            <div class="thumbnail hover">
+                                                <img src="assets/product_01b.jpg" alt="">
+                                            </div>
+                                            <div class="actions">
+                                                <ul>
+                                                    <li><a href=""><i class="ri-star-line"></i></a>
+                                                    </li>
+                                                    <li><a href=""><i class="ri-arrow-left-right-line"></i></a>
+                                                    </li>
+                                                    <li><a href=""><i class="ri-eye-line"></i></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="label"><span>-15%</span></div>
+                                        </div>
+                                        <div class="dot-info">
+                                            <h2 class="dot-title"><a href="">The Sweater
+                                                    in Tosca</a></h2>
+                                            <div class="product-price">
+                                                <span class="before">$62.00</span>
+                                                <span class="current">$45.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item swiper-slide">
+                                        <div class="dot-image">
+                                            <a href="" class="product-permalink"></a>
+                                            <div class="thumbnail">
+                                                <img src="assets/product_02.jpg" alt="">
+                                            </div>
+                                            <div class="thumbnail hover">
+                                                <img src="assets/product_02b.jpg" alt="">
+                                            </div>
+                                            <div class="actions">
+                                                <ul>
+                                                    <li><a href=""><i class="ri-star-line"></i></a>
+                                                    </li>
+                                                    <li><a href=""><i class="ri-arrow-left-right-line"></i></a>
+                                                    </li>
+                                                    <li><a href=""><i class="ri-eye-line"></i></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="label"><span>-25%</span></div>
+                                        </div>
+                                        <div class="dot-info">
+                                            <h2 class="dot-title"><a href="">The Sweater
+                                                    in Tosca</a></h2>
+                                            <div class="product-price">
+                                                <span class="before">$75.00</span>
+                                                <span class="current">$57.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item swiper-slide">
+                                        <div class="dot-image">
+                                            <a href="" class="product-permalink"></a>
+                                            <div class="thumbnail">
+                                                <img src="assets/product_03.jpg" alt="">
+                                            </div>
+                                            <div class="thumbnail hover">
+                                                <img src="assets/product_03b.jpg" alt="">
+                                            </div>
+                                            <div class="actions">
+                                                <ul>
+                                                    <li><a href=""><i class="ri-star-line"></i></a>
+                                                    </li>
+                                                    <li><a href=""><i class="ri-arrow-left-right-line"></i></a>
+                                                    </li>
+                                                    <li><a href=""><i class="ri-eye-line"></i></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="label"><span>-25%</span></div>
+                                        </div>
+                                        <div class="dot-info">
+                                            <h2 class="dot-title"><a href="">The Sweater
+                                                    in Tosca</a></h2>
+                                            <div class="product-price">
+                                                <span class="before">$62.00</span>
+                                                <span class="current">$45.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item swiper-slide">
+                                        <div class="dot-image">
+                                            <a href="" class="product-permalink"></a>
+                                            <div class="thumbnail">
+                                                <img src="assets/product_04.jpg" alt="">
+                                            </div>
+                                            <div class="thumbnail hover">
+                                                <img src="assets/product_04b.jpg" alt="">
+                                            </div>
+                                            <div class="actions">
+                                                <ul>
+                                                    <li><a href=""><i class="ri-star-line"></i></a>
+                                                    </li>
+                                                    <li><a href=""><i class="ri-arrow-left-right-line"></i></a>
+                                                    </li>
+                                                    <li><a href=""><i class="ri-eye-line"></i></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="label"><span>-25%</span></div>
+                                        </div>
+                                        <div class="dot-info">
+                                            <h2 class="dot-title"><a href="">The Sweater
+                                                    in Tosca</a></h2>
+                                            <div class="product-price">
+                                                <span class="before">$99.00</span>
+                                                <span class="current">$89.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item swiper-slide">
+                                        <div class="dot-image">
+                                            <a href="" class="product-permalink"></a>
+                                            <div class="thumbnail">
+                                                <img src="assets/product_05.jpg" alt="">
+                                            </div>
+                                            <div class="thumbnail hover">
+                                                <img src="assets/product_05b.jpg" alt="">
+                                            </div>
+                                            <div class="actions">
+                                                <ul>
+                                                    <li><a href=""><i class="ri-star-line"></i></a>
+                                                    </li>
+                                                    <li><a href=""><i class="ri-arrow-left-right-line"></i></a>
+                                                    </li>
+                                                    <li><a href=""><i class="ri-eye-line"></i></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="label"><span>-15%</span></div>
+                                        </div>
+                                        <div class="dot-info">
+                                            <h2 class="dot-title"><a href="">The Sweater
+                                                    in Tosca</a></h2>
+                                            <div class="product-price">
+                                                <span class="before">$90.00</span>
+                                                <span class="current">$79.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item swiper-slide">
+                                        <div class="dot-image">
+                                            <a href="" class="product-permalink"></a>
+                                            <div class="thumbnail">
+                                                <img src="assets/product_06.jpg" alt="">
+                                            </div>
+                                            <div class="thumbnail hover">
+                                                <img src="assets/product_06b.jpg" alt="">
+                                            </div>
+                                            <div class="actions">
+                                                <ul>
+                                                    <li><a href=""><i class="ri-star-line"></i></a>
+                                                    </li>
+                                                    <li><a href=""><i class="ri-arrow-left-right-line"></i></a>
+                                                    </li>
+                                                    <li><a href=""><i class="ri-eye-line"></i></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="label"><span>-25%</span></div>
+                                        </div>
+                                        <div class="dot-info">
+                                            <h2 class="dot-title"><a href="">The Sweater
+                                                    in Tosca</a></h2>
+                                            <div class="product-price">
+                                                <span class="before">$99.00</span>
+                                                <span class="current">$76.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item swiper-slide">
+                                        <div class="dot-image">
+                                            <a href="" class="product-permalink"></a>
+                                            <div class="thumbnail">
+                                                <img src="assets/product_07.jpg" alt="">
+                                            </div>
+                                            <div class="thumbnail hover">
+                                                <img src="assets/product_07b.jpg" alt="">
+                                            </div>
+                                            <div class="actions">
+                                                <ul>
+                                                    <li><a href=""><i class="ri-star-line"></i></a>
+                                                    </li>
+                                                    <li><a href=""><i class="ri-arrow-left-right-line"></i></a>
+                                                    </li>
+                                                    <li><a href=""><i class="ri-eye-line"></i></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="label"><span>-25%</span></div>
+                                        </div>
+                                        <div class="dot-info">
+                                            <h2 class="dot-title"><a href="">The Sweater
+                                                    in Tosca</a></h2>
+                                            <div class="product-price">
+                                                <span class="before">$62.00</span>
+                                                <span class="current">$45.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="item swiper-slide">
+                                        <div class="dot-image">
+                                            <a href="" class="product-permalink"></a>
+                                            <div class="thumbnail">
+                                                <img src="assets/product_08.jpg" alt="">
+                                            </div>
+                                            <div class="thumbnail hover">
+                                                <img src="assets/product_08b.jpg" alt="">
+                                            </div>
+                                            <div class="actions">
+                                                <ul>
+                                                    <li><a href=""><i class="ri-star-line"></i></a>
+                                                    </li>
+                                                    <li><a href=""><i class="ri-arrow-left-right-line"></i></a>
+                                                    </li>
+                                                    <li><a href=""><i class="ri-eye-line"></i></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="label"><span>-25%</span></div>
+                                        </div>
+                                        <div class="dot-info">
+                                            <h2 class="dot-title"><a href="">The Sweater
+                                                    in Tosca</a></h2>
+                                            <div class="product-price">
+                                                <span class="before">$62.00</span>
+                                                <span class="current">$45.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="nav">
+                                <div class="swiper-button-next">
+                                    <i class="ri-arrow-right-line"></i>
+                                </div>
+                                <div class="swiper-button-prev">
+                                    <i class="ri-arrow-left-line"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </main>
 
         <footer>
@@ -700,6 +983,248 @@
                 <div class="button">
                     <a href="" class="secondary-btn">Login</a>
                     <a href="" class="primary-btn">Register</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="data-share" class="data-popup d-share">
+        <div class="wrap">
+            <div class="data-content">
+                <a href="#0" class="close-trigger" close-button><i class="ri-close-line"></i></a>
+                <div class="form">
+                    <label>Copy link</label>
+                    <input type="text" disabled value="https://youtube.com/c/dotwendesign">
+                    <span><i class="ri-file-copy-line"></i></span>
+                </div>
+                <div class="media-share list-inline">
+                    <label>Share</label>
+                    <ul>
+                        <li><a href=""><i class="ri-facebook-line"></i></a></li>
+                        <li><a href=""><i class="ri-instagram-line"></i></a></li>
+                        <li><a href=""><i class="ri-whatsapp-line"></i></a></li>
+                        <li><a href=""><i class="ri-youtube-line"></i></a></li>
+                        <li><a href=""><i class="ri-pinterest-line"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="data-question" class="data-popup d-question">
+        <div class="wrap">
+            <div class="data-content">
+                <a href="#0" class="close-trigger" close-button><i class="ri-close-line"></i></a>
+                <h3>The question</h3>
+                <form action="">
+                    <div><input type="text" placeholder="Name"></div>
+                    <div><input type="text" placeholder="Email"></div>
+                    <div><textarea placeholder="Your Question Is..." cols="30" rows="5"></textarea></div>
+                    <div class="button">
+                        <button type="submit" class="secondary-btn">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="data-review" class="data-popup d-review">
+        <div class="wrap">
+            <div class="data-content">
+                <a href="#0" class="close-trigger" close-button><i class="ri-close-line"></i></a>
+                <h3>Write a Review</h3>
+                <form action="">
+                    <div class="dotgrid">
+                        <div class="wrapper">
+                            <div>
+                                <div><input type="text" placeholder="Name"></div>
+                                <div><input type="text" placeholder="Email"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rating">
+                        <span>Your Rating :</span>
+                        <div class="stars">
+                            <input type="radio" name="rating" id="star5">
+                            <label for="star5"><i class="ri-star-fill"></i></label>
+                            <input type="radio" name="rating" id="star4">
+                            <label for="star4"><i class="ri-star-fill"></i></label>
+                            <input type="radio" name="rating" id="star5 ">
+                            <label for="star3"><i class="ri-star-fill"></i></label>
+                            <input type="radio" name="rating" id="star5 ">
+                            <label for="star2"><i class="ri-star-fill"></i></label>
+                            <input type="radio" name="rating" id="star1">
+                            <label for="star1"><i class="ri-star-fill"></i></label>
+                        </div>
+                    </div>
+                    <div><input type="text" placeholder="Review title"></div>
+                    <div><textarea placeholder="Your Review Is..." cols="30" rows="5"></textarea></div>
+                    <div class="button">
+                        <button type="submit" class="secondary-btn">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="data-cart" class="cart-menu">
+        <div class="wrap">
+            <a href="#0" class="close-trigger" close-button><i class="ri-close-line"></i></a>
+            <div class="scrollto cart-outer">
+                <div class="wrapper">
+                    <div class="cart-list">
+                        <div class="wrapper">
+                            <div class="cart-header">
+                                <h3>Shopping cart</h3>
+                            </div>
+                            <div class="cart-body scrollto">
+                                <div class="product-list">
+                                    <div class="wrapper">
+                                        <ul>
+                                            <li>
+                                                <div class="grouping">
+                                                    <div class="quantity">
+                                                        <div class="control">
+                                                            <button>-</button>
+                                                            <input type="text" value="1">
+                                                            <button>+</button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="thumbnail">
+                                                        <a href="">
+                                                            <img src="/assets/product_01.jpg" alt="">
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="variants">
+                                                    <h4 class="dot-title"><a href="">The Sweater in Tosca</a></h4>
+                                                    <div class="color color-grey">
+                                                        <span>Color:</span>
+                                                        <span>Tosca</span>
+                                                    </div>
+
+                                                    <div class="size color-grey">
+                                                        <span>Size:</span>
+                                                        <span>L</span>
+                                                    </div>
+                                                    <div class="price">$45.00</div>
+                                                    <a href="" class="item-remove"><i class="ri-close-line"></i></a>
+                                                </div>
+                                            </li>
+
+                                            <li>
+                                                <div class="grouping">
+                                                    <div class="quantity">
+                                                        <div class="control">
+                                                            <button>-</button>
+                                                            <input type="text" value="1">
+                                                            <button>+</button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="thumbnail">
+                                                        <a href="">
+                                                            <img src="/assets/product_02.jpg" alt="">
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="variants">
+                                                    <h4 class="dot-title"><a href="">Ocean Blue LLC2</a></h4>
+                                                    <div class="color color-grey">
+                                                        <span>Color:</span>
+                                                        <span>Ocean</span>
+                                                    </div>
+
+                                                    <div class="size color-grey">
+                                                        <span>Size:</span>
+                                                        <span>L</span>
+                                                    </div>
+                                                    <div class="price">$57.00</div>
+                                                    <a href="" class="item-remove"><i class="ri-close-line"></i></a>
+                                                </div>
+                                            </li>
+
+                                            <li>
+                                                <div class="grouping">
+                                                    <div class="quantity">
+                                                        <div class="control">
+                                                            <button>-</button>
+                                                            <input type="text" value="1">
+                                                            <button>+</button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="thumbnail">
+                                                        <a href="">
+                                                            <img src="/assets/product_07.jpg" alt="">
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="variants">
+                                                    <h4 class="dot-title"><a href="">Solid Pink GIO</a></h4>
+                                                    <div class="color color-grey">
+                                                        <span>Color:</span>
+                                                        <span>Pink</span>
+                                                    </div>
+
+                                                    <div class="size color-grey">
+                                                        <span>Size:</span>
+                                                        <span>XL</span>
+                                                    </div>
+                                                    <div class="price">$45.00</div>
+                                                    <a href="" class="item-remove"><i class="ri-close-line"></i></a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cart-footer">
+                                <div class="discount">
+                                    <form action="">
+                                        <input type="text" class="input" placeholder="Coupon">
+                                        <input type="submit" class="submit" value="Apply">
+                                    </form>
+                                </div>
+                                <div class="math-pricing">
+                                    <ul>
+                                        <li>
+                                            <span>Subtotal</span>
+                                            <span class="value"></span>
+                                        </li>
+                                        <ul>
+                                            <li><span>Shipping</span></li>
+                                            <li>
+                                                <div>
+                                                    <input type="radio" class="checker" name="shipping">
+                                                    <label for="">Free</label>
+                                                </div>
+                                                <span class="value">$0.00</span>
+                                            </li>
+
+                                            <li>
+                                                <div>
+                                                    <input type="radio" class="checker" name="shipping">
+                                                    <label for="">Flat</label>
+                                                </div>
+                                                <span class="value">$10.00</span>
+                                            </li>
+                                        </ul>
+                                        <li>
+                                            <span>Promo Discount</span>
+                                            <span class="value">- $0.00</span>
+                                        </li>
+                                        <li class="total">
+                                            <span>Total</span>
+                                            <span class="value"> $147.00</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="button">
+                                    <a href="" class="secondary-btn">Checkout</a>
+                                    <a href="" class="grey-link">View Cart</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
