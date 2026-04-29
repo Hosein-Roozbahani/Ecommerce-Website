@@ -1,5 +1,5 @@
 const triggerOpen = document.querySelectorAll('[trigger-button]');
-const triggerClose = document.querySelectorAll('[close-button ]');
+const triggerClose = document.querySelectorAll('[close-button]');
 const overlay = document.querySelector('[data-overlay]');
 
 for (let i = 0; i < triggerOpen.length; i++) {
@@ -10,14 +10,16 @@ for (let i = 0; i < triggerOpen.length; i++) {
         targetEl.classList.remove('active');
         overlay.classList.remove('active');
     };
-    triggerOpen[i].addEventListener('click', function () {
+    triggerOpen[i].addEventListener('click', function (e) {
         targetEl.classList.add('active');
         overlay.classList.add('active');
+        e.preventDefault();
     });
 
     targetEl.querySelector('[close-button]').addEventListener('click', openData);
     overlay.addEventListener('click', openData);
-
+    console.log(targetEl);
+    
 }
 
 // mobile-menu submenu
@@ -36,14 +38,14 @@ const sorter = document.querySelector('.sort-list');
 if(sorter){
     const sortLi = sorter.querySelectorAll('li');
     sorter.querySelector('.opt-trigger').addEventListener('click', function () {
-        sorter.querySelector('ul').classList.toggle('show')
+        sorter.querySelector('ul').classList.toggle('show');
     });
     sortLi.forEach( (item) => item.addEventListener('click', function () {
         sortLi.forEach((li) => li != this ? li.classList.remove('.active'): null);
 
         this.classList.add('active');
         sorter.querySelector('.opt-trigger span.value').textContent = this.textContent;
-        sorter.querySelector('ul').classList.toggle('show')
+        sorter.querySelector('ul').classList.toggle('show');
     }))
 }
 
@@ -129,5 +131,34 @@ const carousel = new Swiper('.carouselbox', {
             centeredSlides: false,
         },
     }
+
+});
+
+// Product Image > Product Page :
+
+const thumbImage = new Swiper('.thumbnail-image', {
+
+    // loop: true,
+    direction: 'vertical',
+    spaceBetween: 15,
+    slidesPerView: 1,
+    freeMode : true,
+    watchSlidesProgress: true,  
+
+});
+
+const mainImage = new Swiper('.main-image', {
+
+    loop: true,
+    autoHeight: true,
+    
+    pagination : {
+        el: '.swiper-pagination',
+        clickable : true,
+    },
+
+    thumbs: {
+        swiper: thumbImage
+    },
 
 });
