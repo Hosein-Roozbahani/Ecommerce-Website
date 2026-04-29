@@ -2040,7 +2040,7 @@ form .button {
 }
 
 input[type="range"] {
-    -webkit-appearance: none;
+    --webkit-appearance: none;
     width: 100%;
 }
 
